@@ -17,16 +17,6 @@
       <div class="inputBox">
         <input type="text" ref="myInput" v-model="tel">
       </div>
-      <p>床前明月光</p>
-      <p>床前明月光</p>
-      <p>床前明月光</p>
-      <p>床前明月光</p>
-      <p>床前明月光</p>
-      <p>床前明月光</p>
-      <p>床前明月光</p>
-      <p>床前明月光</p>
-      <p>床前明月光</p>
-      <p>床前明月光</p>
     </div>
     <input type="button" class="btn" value="免费领取" @click="handleClick">
   </div>
