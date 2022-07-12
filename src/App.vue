@@ -1,24 +1,64 @@
 <template>
   <div id="app">
     <div>
-      <p>床前明月光</p>
-      <p>床前明月光</p>
-      <p>床前明月光</p>
-      <p>床前明月光</p>
-      <p>床前明月光</p>
-      <p>床前明月光</p>
-      <p>床前明月光</p>
-      <p>床前明月光</p>
-      <p>床前明月光</p>
-      <p>床前明月光</p>
-      <p>床前明月光</p>
-      <p>床前明月光</p>
-      <p>床前明月光</p>
-      <div class="inputBox">
-        <input type="text" ref="myInput" v-model="tel">
-      </div>
+      <button @click="index = 0">布局1</button>
+      <button @click="index = 1">布局2</button>
+      <button @click="index = 2">布局3</button>
     </div>
-    <input type="button" class="btn" value="免费领取" @click="handleClick">
+    <div  v-if="index === 0">
+      <div>
+        <p>床前明月光</p>
+        <p>床前明月光</p>
+        <p>床前明月光</p>
+        <p>床前明月光</p>
+        <p>床前明月光</p>
+        <p>床前明月光</p>
+        <p>床前明月光</p>
+        <p>床前明月光</p>
+        <p>床前明月光</p>
+        <p>床前明月光</p>
+        <p>床前明月光</p>
+        <p>床前明月光</p>
+        <p>床前明月光</p>
+        <div class="inputBox">
+          <input type="text" ref="myInput" v-model="tel">
+        </div>
+      </div>
+      <input type="button" class="btn" value="免费领取" @click="handleClick">
+    </div>
+    <div v-if="index === 1">
+      <div class="fixedbox">
+        <p>疑是地上霜</p>
+        <p>疑是地上霜</p>
+        <p>疑是地上霜</p>
+        <p>疑是地上霜</p>
+        <p>疑是地上霜</p>
+        <p>疑是地上霜</p>
+        <p>疑是地上霜</p>
+        <p>疑是地上霜</p>
+        <p>疑是地上霜</p>
+        <p>疑是地上霜</p>
+        <p>疑是地上霜</p>
+        <p>疑是地上霜</p>
+        <p>疑是地上霜</p>
+        <p>疑是地上霜</p>
+        <p>疑是地上霜</p>
+        <p>疑是地上霜</p>
+        <p>疑是地上霜</p>
+        <p>疑是地上霜</p>
+        <div class="inputBox">
+          <input type="text" ref="myInput" v-model="tel">
+        </div>
+      </div>
+      <input type="button" class="btn fixedbtn" value="免费领取" @click="handleClick">
+    </div>
+    <div v-if="index === 2">
+      <div class="inputBox fixedInput">
+          <input type="text" ref="myInput" v-model="tel">
+        </div>
+        <input type="button" class="btn fixedbtn" value="免费领取" @click="handleClick">
+    </div>
+
   </div>
 </template>
 
@@ -28,7 +68,8 @@ export default {
   name: 'App',
   data() {
     return {
-      tel: ''
+      tel: '',
+      index: 0
     };
   },
   methods: {
@@ -57,5 +98,19 @@ input{
   margin: 0 auto;
   height: 45px;
   width: 90%;
+}
+.fixedbox{
+  padding-bottom: 40px;
+}
+.fixedbtn{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.fixedInput{
+  position: fixed;
+  width: 100%;
+  bottom: 60px;
+  left: 0;
 }
 </style>
