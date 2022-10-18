@@ -2,7 +2,7 @@
   <div id="app">
     <div class="main">
       <ul>
-        <li v-for="i in 50" :key="i">{{i}}</li>
+        <li v-for="i in 50" :key="i">美云销 版本列表美云销 版本列表美云销 版本列表美云销 版本列表美云销 版本列表美云销 版本列表美云销 版本列表</li>
       </ul>
     </div>
   </div>
@@ -29,6 +29,7 @@ body, div{
   background: #fcc;
   overflow-y: auto;
 }
+ul{ width: 500px;}
 li{
   line-height: 1.75;
 }
