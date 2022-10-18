@@ -25,6 +25,9 @@ body, div{
 }
 .main{
   position: relative;
+  height: 500px;
+  background: #fcc;
+  overflow-y: auto;
 }
 li{
   line-height: 1.75;
